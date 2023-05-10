@@ -1,0 +1,105 @@
+.testmonials {
+	position: relative;
+	margin-top: 10px;
+}
+.testmonials > h2 {
+	padding-top: 30px;
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.testimonial_wrapper {
+	padding-top: 50px;
+}
+.swiper {
+	position: relative !important;
+}
+.swiper-slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.swiper-slide > .content {
+	width: clamp(550px, 70%, 900px);
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50px;
+	background: rgba(0, 0, 0, 0.259);
+	z-index: 111;
+}
+.swiper-slide .content p {
+	font-size: clamp(15px, 1.7vw, 20px);
+	margin-left: 20px;
+	text-align: justify;
+}
+.navigation {
+	position: absolute;
+	width: 90%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.navigation > button {
+	width: 45px;
+	height: 45px;
+}
+.navigation > button > span {
+	width: 95%;
+	height: 95%;
+	background: var(--navyblue);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.navigation > button > span > svg {
+	width: 50%;
+	height: 50%;
+}
+.navigation > .next {
+	transform: rotate(-180deg);
+}
+.swiper-slide > .content > img {
+	border-radius: 50%;
+	width: clamp(150px, 20vw, 250px);
+}
+
+.swiper-pagination-bullet {
+	background: rgba(255, 255, 255, 0.936) !important;
+	width: 10px !important;
+	height: 10px !important;
+}
+.swiper-pagination-bullet-active {
+	background: dodgerblue !important;
+}
+
+@media only screen and (max-width: 814px) {
+	.navigation {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 715px) {
+	.swiper-slide > .content {
+		flex-direction: column;
+	}
+	.swiper-slide > .content > p {
+		margin-left: 0;
+		margin-top: 12px;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.navigation > button {
+		width: 40px;
+		height: 40px;
+	}
+	.navigation {
+		top: 30%;
+	}
+}

@@ -1,0 +1,171 @@
+.about {
+	margin-top: 25px;
+}
+.about_deatils {
+	background: rgba(255, 255, 255, 0.045);
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.about_deatils > .about_img {
+	width: 30%;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+}
+.about_deatils > .about_img > span {
+	background: linear-gradient(to bottom, var(--skyblue), var(--orange));
+	border-radius: 50%;
+	position: relative;
+	width: clamp(150px, 20vw, 200px);
+	height: clamp(150px, 20vw, 200px);
+}
+.about_deatils > .about_img > span > img {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: rgb(38, 37, 37);
+	border-radius: 50%;
+	position: absolute;
+	width: 94%;
+	height: 94%;
+}
+.about_deatils > .about_text {
+	width: 70%;
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.about_deatils > .about_text > p {
+	font-size: clamp(17px, 1.7vw, 20px);
+	margin-top: 7px;
+}
+.about_deatils > .about_text > button {
+	margin-top: 7px;
+}
+.about_deatils > .about_text > button > img {
+	width: 20px;
+}
+@media only screen and (max-width: 730px) {
+	.about_deatils {
+		flex-direction: column;
+	}
+	.about_deatils > .about_img {
+		margin-top: 20px;
+		width: 100%;
+	}
+	.about_deatils > .about_text {
+		width: 100%;
+	}
+	.about_deatils > .about_text > h2 {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		text-align: center;
+	}
+	.about_deatils > .about_text > button {
+		align-self: center;
+	}
+}
+
+/**_____ about info from here_________ */
+.about_info {
+	margin-top: 20px;
+}
+.about_info > .navigator {
+	display: flex;
+	justify-content: center;
+}
+.about_info > .navigator > li {
+	width: 100px;
+	height: 30px;
+	font-size: clamp(15px, 1.6vw, 18px);
+	background: rgba(255, 255, 255, 0.679);
+	color: black;
+	margin: 10px;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.serviceactive {
+	background: white !important;
+}
+.skillactive {
+	background: white !important;
+}
+.skill_wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2rem;
+	padding: 20px 60px;
+}
+.skill_wrapper > .skills > .skill_info {
+	display: flex;
+	justify-content: space-between;
+}
+.skill_wrapper > .skills > .skill_info p {
+	font-size: clamp(17px, 1.7vw, 20px);
+	padding-bottom: 6px;
+}
+.skill_progress > .holder {
+	height: 18px;
+	background: rgba(255, 255, 255, 0.14);
+	box-shadow: inset -4px 5px 4px rgba(0, 0, 0, 0.35);
+	/* border: 1px solid white; */
+	border-radius: 30px;
+}
+.skill_progress > .holder > .progress_bar {
+	height: 17px;
+	border-radius: 30px;
+	background: linear-gradient(90deg, #c97f1b 2.37%, #23bdd2 100%);
+	box-shadow: inset 5px -4px 5px rgba(0, 0, 0, 0.35);
+}
+.python,
+.node {
+	width: 90%;
+}
+.javascript,
+.express,
+.css {
+	width: 95%;
+}
+.html {
+	width: 100%;
+}
+.mongoDB {
+	width: 85%;
+}
+.php {
+	width: 50%;
+}
+@media only screen and (max-width: 880px) {
+	.skill_progress > .holder {
+		height: 16px;
+	}
+	.skill_progress > .holder > .progress_bar {
+		height: 15px;
+	}
+}
+@media only screen and (max-width: 796px) {
+	.skill_wrapper {
+		padding: 20px 10px;
+		grid-gap: 1rem;
+	}
+}
+@media only screen and (max-width: 450px) {
+	.skill_wrapper {
+		grid-template-columns: 1fr;
+	}
+	.skill_progress > .holder {
+		height: 14px;
+	}
+	.skill_progress > .holder > .progress_bar {
+		height: 13px;
+	}
+}

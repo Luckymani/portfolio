@@ -1,0 +1,89 @@
+.services {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 70px auto 0px auto;
+	max-width: 1000px;
+	color: black;
+}
+
+.service {
+	background-color: #cccccc;
+	border-radius: 15px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	margin-bottom: 40px;
+	width: 30%;
+	position: relative;
+	border-radius: 30px;
+}
+
+.service img {
+	position: absolute;
+	background: black;
+	width: clamp(100px, 50%, 120px);
+	border-radius: 50%;
+	top: 0;
+	left: 50%;
+}
+
+.service h2 {
+	margin-top: 65px;
+	font-size: clamp(21px, 2.1vw, 2px);
+	font-weight: 700;
+	width: 100%;
+	text-align: center;
+	color: black !important;
+	/* background: yellow; */
+}
+
+.service p {
+	font-size: 16px;
+	margin: 0 24px 10px;
+	text-align: justify;
+}
+
+.service button {
+	background-color: #4caf50;
+	border: none;
+	border-radius: 20px;
+	color: white;
+	cursor: pointer;
+	display: block;
+
+	margin: 0 auto 24px;
+	padding: 12px 24px;
+	transition: background-color 0.3s ease;
+}
+
+.service button:hover {
+	background-color: #3e8e41;
+}
+@media only screen and (max-width: 730px) {
+	.services {
+		margin-top: 15px;
+		flex-direction: column;
+		gap: 12px;
+	}
+	.service {
+		width: clamp(100px, 100%, 600px);
+		margin: auto;
+		display: flex;
+		align-items: center;
+	}
+	.service img {
+		margin-top: 0px;
+		height: 100px;
+		position: relative !important;
+		object-fit: contain;
+		left: 0;
+		top: 0;
+		transform: translate(0, 0);
+		border: 1px solid black;
+	}
+	.service h2 {
+		margin: 0;
+	}
+	.service button {
+		margin: 10px auto;
+	}
+}

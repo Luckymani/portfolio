@@ -1,0 +1,222 @@
+.home {
+	padding-top: min(70px, 7vh);
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: space-between;
+}
+.home > .background_headding {
+	position: absolute;
+	top: -20px;
+	text-align: center;
+	width: 100%;
+	font-size: 30px;
+	font-size: clamp(37px, 8vw, 120px);
+	font-family: "Koulen";
+	opacity: 0.12;
+}
+.home > .social_media_icons > li {
+	padding: 10px 0px;
+	margin-right: 1vw;
+	cursor: pointer;
+}
+.home > .social_media_icons > li > img {
+	width: clamp(35px, 3.5vw, 40px);
+	height: clamp(35px, 3.5vw, 40px);
+}
+.home > .content {
+	/* border: 1px solid white; */
+	width: clamp(100px, 60%, 750px);
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 3% 0px;
+}
+.home > .content > h1 {
+	white-space: nowrap;
+	margin-top: 12px;
+	/* border: 1px solid blue; */
+}
+.home > .content > h1 > span {
+	font-size: clamp(23px, 3vw, 38px);
+	white-space: nowrap;
+	font-family: "Tiltwrap";
+	font-weight: 50;
+	margin-left: 4px;
+}
+
+.proficient {
+	/* background: yellow; */
+	position: relative;
+}
+.proficient.hide {
+	color: var(--navyblue) !important;
+}
+
+.transition {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: var(--skyblue);
+}
+
+.home > .content > h1 > .name {
+	color: var(--skyblue);
+}
+.home > .content > h1 > .proficient {
+	color: var(--orange);
+}
+
+.home > .content > p {
+	margin-top: 12px;
+	font-size: clamp(17px, 1.7vw, 20px);
+	text-align: justify;
+}
+.home > .content > button {
+	margin-top: 25px;
+}
+.home > .content > button > img {
+	width: 30px;
+	height: 30px;
+}
+.home > .profile {
+	/* border: 1px solid yellow; */
+	/* object-fit: contain; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 40%;
+}
+.home > .profile > .profile_img {
+	position: relative;
+}
+
+.tag1,
+.tag2 {
+	padding: 16px 0px;
+	background: white;
+	position: absolute;
+	font-family: "koulen";
+	border-radius: 30px;
+	background: rgba(0, 0, 0, 0.54);
+	display: flex;
+	align-items: center;
+	font-size: clamp(10px, 1.3vw, 18px);
+	padding: 0px 10px;
+}
+.tag1 {
+	right: 0;
+	top: 25%;
+}
+
+.tag2 {
+	left: -20px;
+	bottom: 12%;
+}
+.tag1 > img {
+	margin-left: 8px;
+	width: clamp(20px, 3vw, 30px);
+	height: clamp(20px, 3vw, 30px);
+}
+.tag2 > img {
+	margin-right: 8px;
+	width: clamp(20px, 3vw, 30px);
+	height: clamp(20px, 3vw, 30px);
+}
+.profile > .social_media_icons {
+	display: none;
+}
+.home > .profile > .profile_img > img {
+	width: clamp(230px, 29vw, 400px);
+	/* border: 1px solid white; */
+}
+.profile > .profile_data {
+	display: flex;
+	justify-content: space-around;
+	width: clamp(100px, 29vw, 400px);
+}
+.profile > .profile_data > div {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.profile > .profile_data > div > span {
+	width: clamp(35px, 4vw, 60px);
+	height: clamp(35px, 4vw, 60px);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(to right, var(--skyblue), var(--orange));
+	position: relative;
+}
+.profile_data > div > span > span {
+	position: absolute;
+	width: 90%;
+	height: 90%;
+	background: var(--navyblue);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+.profile > .profile_data > div > p {
+	/* font-family: "koulen"; */
+	font-size: clamp(15px, 1.6vw, 20px);
+}
+@media only screen and (max-width: 730px) {
+	.home {
+		flex-direction: column-reverse;
+		padding-top: min(20px, 5vh);
+	}
+
+	.home > .social_media_icons {
+		display: none;
+	}
+	.home > .social_media_icons > li {
+		padding: 0;
+	}
+	.home > .content {
+		padding-top: 40px;
+		width: 100%;
+		/* border: 2px solid white; */
+	}
+	.home > .content .home > .profile {
+		width: 100%;
+	}
+	.home > .profile > .profile_img > img {
+		width: 250px;
+	}
+	.home > .profile {
+		position: relative;
+		width: 100%;
+		/* background: black; */
+	}
+	.tag1 {
+		top: 30%;
+	}
+	.profile > .profile_data {
+		position: absolute;
+		width: max(270px, 100%);
+		/* background: yellow; */
+		justify-content: space-between;
+		padding: 0px 20px;
+		top: 0;
+	}
+	.profile > .social_media_icons {
+		display: block;
+		position: absolute;
+		display: flex;
+		justify-content: space-around;
+		width: max(300px, 70%);
+		bottom: -50px;
+	}
+	.profile > .social_media_icons > li > img {
+		width: 35px;
+		height: 35px;
+	}
+}
