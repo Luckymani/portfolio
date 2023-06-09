@@ -28,7 +28,7 @@ const array = [
 		title: "portfolio version1",
 		image_url: "/project images/portfolio version1.svg",
 		description: "this is my portfolio version1! This platform showcases my work, skills, and achievements in a visually appealing manner. Designed to establish a professional online presence, It reflects my unique style and philosophy while highlighting my problem-solving skills and value to clients. ",
-		project_link: "https://mani-portfolio.netlify.app",
+		project_link: "https://mani-kanta-portfolio.netlify.app",
 		className: "portfolio1",
 	},
 	{
