@@ -50,7 +50,7 @@ function Projects() {
 		}
 		window.addEventListener("resize", runfunction);
 		return () => window.removeEventListener("resize", runfunction);
-	}, []);
+	}, [width]);
 
 	return (
 		<section className="project" id="projects">
@@ -80,7 +80,7 @@ function Projects() {
 					navigation={{ prevEl: ".prev", nextEl: ".next" }}>
 					{array.map((value, index) => {
 						return (
-							<SwiperSlide>
+							<SwiperSlide key={index}>
 								<div className={`single_project ${value.className}`} key={index}>
 									<img src={value.image_url}></img>
 									<p>{value.title}</p>

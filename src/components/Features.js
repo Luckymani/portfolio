@@ -35,7 +35,7 @@ function Features() {
 		},
 	};
 
-	const { currentState, dispatch } = useContext(userContext);
+	const { dispatch } = useContext(userContext);
 	return (
 		<motion.section className="features" id="features" variants={featuresVariants} initial="initial" animate="animate">
 			<h2>Features</h2>
