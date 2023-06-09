@@ -4,6 +4,7 @@ import UseTypeWritter from "../ownHooks/useTypeWritter";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import navigator from "../function snippet/social_media";
+import { scroller } from "react-scroll";
 
 const contentVariants = {
 	initial: {},
@@ -90,6 +91,15 @@ function Home() {
 	const [mobileicons, minView] = useInView({ threshold: 0.2 });
 	const [profileRef, profileInView] = useInView({ threshold: 0.2 });
 
+	function handleScroll(val) {
+		// console.log(val);
+		scroller.scrollTo(val, {
+			duration: 800,
+			delay: 0,
+			smooth: "easeInOutQuart",
+			offset: -90,
+		});
+	}
 	return (
 		<section className="home" id="home">
 			{/* {console.log("homecomponent rendered")} */}
@@ -166,9 +176,14 @@ function Home() {
 						<p>year</p>
 						<p>experience</p>
 					</div>
-					<div className="projects">
+					<div
+						className="projects"
+						style={{ cursor: "pointer" }}
+						onClick={() => {
+							handleScroll("projects");
+						}}>
 						<span>
-							<span>2 +</span>
+							<span>3 +</span>
 						</span>
 						<p>projects</p>
 						<p>completed</p>

@@ -14,7 +14,6 @@ function UseTypeWritter({ textArray, speed, spaceBetween }) {
 			const nextCharacter = textArray[currentElement][currentIndex];
 			setDisplayText((prevText) => prevText + nextCharacter);
 			setCurrentIndex((prevIndex) => prevIndex + 1);
-			console.log("charchange");
 		}
 
 		function nextIndex() {
@@ -30,7 +29,6 @@ function UseTypeWritter({ textArray, speed, spaceBetween }) {
 				setCurrentIndex(0);
 				setDisplayText("");
 				setCurrentElement((prevIndex) => prevIndex + 1);
-				console.log("indexChange");
 			}, 500);
 			return () => clearTimeout(timeoutId);
 		}
@@ -44,7 +42,6 @@ function UseTypeWritter({ textArray, speed, spaceBetween }) {
 				return () => clearTimeout(timeoutId);
 			}
 		} else {
-			console.log("hello");
 			setCurrentElement(0);
 		}
 	}, [currentIndex, currentElement]);

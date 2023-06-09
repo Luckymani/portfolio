@@ -3,6 +3,7 @@
 }
 .about_deatils {
 	background: rgba(255, 255, 255, 0.045);
+	border-radius: 15px;
 	display: flex;
 	justify-content: space-between;
 	position: relative;
@@ -42,12 +43,16 @@
 .about_deatils > .about_text > p {
 	font-size: clamp(17px, 1.7vw, 20px);
 	margin-top: 7px;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	text-align: justify;
 }
 .about_deatils > .about_text > button {
-	margin-top: 7px;
+	margin-top: 9px;
+	margin-bottom: 9px;
 }
 .about_deatils > .about_text > button > img {
 	width: 20px;
+	margin-left: 5px;
 }
 @media only screen and (max-width: 730px) {
 	.about_deatils {

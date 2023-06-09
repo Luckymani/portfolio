@@ -67,6 +67,9 @@
 }
 
 @media only screen and (max-width: 680px) {
+	.headder {
+		margin-top: 10px;
+	}
 	.menu_btn_wrapper {
 		background: rgba(0, 0, 0, 0.494);
 		border-radius: 30%;
@@ -80,8 +83,8 @@
 		position: absolute;
 		display: flex;
 		flex-direction: column;
-		width: min(260px, 60vw);
-		height: max(370px, 47vh);
+		width: min(260px, 55vw);
+		height: max(370px, 45vh);
 		padding: 80px 10px 20px 10px;
 		clip-path: circle(2px at 85% 25px);
 		background: rgb(189, 189, 189);
@@ -90,9 +93,11 @@
 		border-bottom-left-radius: 30px;
 		border-top-left-radius: 30px;
 	}
-	/* .nav_links.mobile > li {
-		border: 1px solid blue;
-	} */
+	.nav_links.mobile > li {
+		padding-left: 20%;
+		background: rgba(251, 251, 251, 0.291);
+		border-radius: 10px;
+	}
 	.nav_links.mobile > li::after {
 		left: 0;
 		transform: translatex(0%);

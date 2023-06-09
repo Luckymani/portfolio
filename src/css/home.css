@@ -73,6 +73,7 @@
 	margin-top: 12px;
 	font-size: clamp(17px, 1.7vw, 20px);
 	text-align: justify;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .home > .content > button {
 	margin-top: 25px;
@@ -174,6 +175,9 @@
 		padding-top: min(20px, 5vh);
 	}
 
+	.home > .background_headding {
+		top: -12px;
+	}
 	.home > .social_media_icons {
 		display: none;
 	}

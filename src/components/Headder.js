@@ -109,8 +109,8 @@ function Headder() {
 	}
 
 	return (
-		<section className={`headder`}>
-			<div className="logo">
+		<section className="headder" style={{ cursor: "pointer" }}>
+			<div className="logo" onClick={() => handleScroll("home")}>
 				<img src={"/images/logo.png"} alt="logo" />
 				<span>Code Adict</span>
 			</div>
@@ -132,28 +132,28 @@ function Headder() {
 					<motion.li variants={navbarLinkVariants} whileHover={{ scaleX: 1.25, transition: { type: "spring" } }} onClick={() => handleScroll("features")}>
 						Features
 					</motion.li>
-					<motion.li variants={navbarLinkVariants} whileHover={{ scaleX: 1.25, transition: { type: "spring" } }} onClick={() => handleScroll("testimonials")}>
-						Testimonials
+					<motion.li variants={navbarLinkVariants} whileHover={{ scaleX: 1.25, transition: { type: "spring" } }} onClick={() => handleScroll("projects")}>
+						Projects
 					</motion.li>
 					<motion.li variants={navbarLinkVariants} whileHover={{ scaleX: 1.25, transition: { type: "spring" } }} onClick={() => handleScroll("contact")}>
-						contact
+						Contact
 					</motion.li>
 				</motion.ul>
 			)}
 			<motion.ul className={`nav_links mobile ${opened && "opened"}`} variants={navmenuVariants} initial="false" animate="animate" ref={navRef}>
-				<motion.li variants={linkVariants} whileHover={{ scaleX: 1.2, transformOrigin: "left center", transition: { type: "spring", ease: "easeInOut" } }}>
+				<motion.li variants={linkVariants} whileHover={{ scaleX: 1.2, transformOrigin: "left center", transition: { type: "spring", ease: "easeInOut" } }} onClick={() => handleScroll("home")}>
 					Home
 				</motion.li>
-				<motion.li variants={linkVariants} whileHover={{ scaleX: 1.2, transformOrigin: "left center", transition: { type: "spring", ease: "easeInOut" } }}>
+				<motion.li variants={linkVariants} whileHover={{ scaleX: 1.2, transformOrigin: "left center", transition: { type: "spring", ease: "easeInOut" } }} onClick={() => handleScroll("about")}>
 					About
 				</motion.li>
-				<motion.li variants={linkVariants} whileHover={{ scaleX: 1.2, transformOrigin: "left center", transition: { type: "spring", ease: "easeInOut" } }}>
+				<motion.li variants={linkVariants} whileHover={{ scaleX: 1.2, transformOrigin: "left center", transition: { type: "spring", ease: "easeInOut" } }} onClick={() => handleScroll("features")}>
 					Features
 				</motion.li>
-				<motion.li variants={linkVariants} whileHover={{ scaleX: 1.2, transformOrigin: "left center", transition: { type: "spring", ease: "easeInOut" } }}>
-					Testimonials
+				<motion.li variants={linkVariants} whileHover={{ scaleX: 1.2, transformOrigin: "left center", transition: { type: "spring", ease: "easeInOut" } }} onClick={() => handleScroll("projects")}>
+					Projects
 				</motion.li>
-				<motion.li variants={linkVariants} whileHover={{ scaleX: 1.2, transformOrigin: "left center", transition: { type: "spring", ease: "easeInOut" } }}>
+				<motion.li variants={linkVariants} whileHover={{ scaleX: 1.2, transformOrigin: "left center", transition: { type: "spring", ease: "easeInOut" } }} onClick={() => handleScroll("contact")}>
 					contact
 				</motion.li>
 			</motion.ul>

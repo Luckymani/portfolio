@@ -63,7 +63,7 @@
 	.features {
 		grid-template-columns: repeat(2, 1fr);
 		grid-auto-columns: 100px;
-		grid-gap: 1rem;
+		grid-gap: 1.2rem;
 	}
 	.feature_wrapper > .content_wrapper {
 		width: clamp(110px, 100%, 280px);

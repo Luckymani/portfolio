@@ -54,15 +54,15 @@ const Services = () => {
 				<div>
 					<motion.h2 variants={restVariants}>App Development</motion.h2>
 					<motion.p variants={restVariants}>I create custom mobile apps for iOS and Android that are scalable, secure, and user-friendly.</motion.p>
-					<motion.button variants={restVariants}>Learn More</motion.button>
+					{/* <motion.button variants={restVariants}>Learn More</motion.button> */}
 				</div>
 			</motion.div>
 			<motion.div className="service" variants={singleVariants}>
 				<motion.img src="/images/web-development.jpeg" alt="Website Development" variants={imageVariants} />
 				<div>
 					<motion.h2 variants={restVariants}>Website Development</motion.h2>
-					<motion.p variants={restVariants}>I develop custom websites that are scalable, secure, and user-friendly to help you achieve your business goals.</motion.p>
-					<motion.button variants={restVariants}>Learn More</motion.button>
+					<motion.p variants={restVariants}>I develop custom websites that are scalable, secure, and user-friendly to help you achieve your business goals. with responsive design</motion.p>
+					{/* <motion.button variants={restVariants}>Learn More</motion.button> */}
 				</div>
 			</motion.div>
 			<motion.div className="service" variants={singleVariants}>
@@ -70,7 +70,7 @@ const Services = () => {
 				<div>
 					<motion.h2 variants={restVariants}>UI/UX Design</motion.h2>
 					<motion.p variants={restVariants}>I design engaging and intuitive user interfaces and experiences that drive customer engagement and business growth.</motion.p>
-					<motion.button variants={restVariants}>Learn More</motion.button>
+					{/* <motion.button variants={restVariants}>Learn More</motion.button> */}
 				</div>
 			</motion.div>
 		</motion.div>

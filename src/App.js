@@ -1,16 +1,13 @@
 import React, { useReducer } from "react";
 import "./css/App.css";
 import Headder from "./components/Headder";
-import Framermotion from "./components/framermotion";
 import Home from "./components/Home.js";
 import About from "./components/About.js";
 import Features from "./components/Features.js";
-import Testmonials from "./components/Testmonials";
+import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import deatilsObject from "./function snippet/featuresdata.js";
 import Notedata from "./components/Notedata.js";
-
-// import UseTypeWritter from "./ownHooks/useTypeWritter";
 
 const initialState = { notify: false };
 const reducer = (state, action) => {
@@ -27,26 +24,27 @@ const reducer = (state, action) => {
 			return { notify: true, data: deatilsObject.database };
 		case "responsive":
 			return { notify: true, data: deatilsObject.responsive };
+
+		case "close":
+			return { notify: false, data: "no data" };
 		default:
-			return null;
+			return { notify: false, data: "no data" };
 	}
 };
 export const userContext = React.createContext();
 function App() {
 	const [currentState, dispatch] = useReducer(reducer, initialState);
-	// console.log(currentState);
 
 	return (
 		<userContext.Provider value={{ currentState, dispatch }}>
 			<>
 				{currentState.notify && <Notedata></Notedata>}
 				<div className="App">
-					{/* <Framermotion /> */}
 					<Headder />
 					<Home />
 					<About />
 					<Features />
-					<Testmonials />
+					<Projects />
 					<Contact />
 				</div>
 			</>

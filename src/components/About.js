@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../css/about.css";
 import Skills from "./Skills";
-import Education from "./Education";
 import Services from "./Services";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -31,7 +30,7 @@ function About() {
 
 	function handleDownload() {
 		// console.log("button clicked");
-		const url = "/files/manikanta reasume.pdf";
+		const url = "/files/manikanta-w2.pdf";
 		const link = document.createElement("a");
 		link.href = url;
 		link.download = "manikanta reasume.pdf";
@@ -66,7 +65,6 @@ function About() {
 						}}>
 						skills
 					</motion.li>
-					{/* <li>education</li> */}
 					<motion.li
 						className={`${services && "serviceactive"}`}
 						whileHover={{ scaleX: 1.1, letterSpacing: "1.5px" }}
@@ -83,8 +81,6 @@ function About() {
 						<Services />
 					</AnimatePresence>
 				)}
-
-				{/* <Education /> */}
 			</div>
 		</section>
 	);

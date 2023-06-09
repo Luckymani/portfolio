@@ -52,35 +52,49 @@ function Features() {
 				<div className="content_wrapper">
 					<motion.img alt="feature_image" src="/images/responsive.png" variants={imageVariants}></motion.img>
 					<motion.p variants={singleVariants}>Responsive</motion.p>
-					<motion.button variants={singleVariants}>know more</motion.button>
+					<motion.button variants={singleVariants} onClick={() => dispatch("responsive")}>
+						know more
+					</motion.button>
 				</div>
 			</motion.div>
 			<motion.div className="feature_wrapper item3" ref={ref3} variants={featureVariants} initial="initial" animate={ref3InView ? "animate" : "initial"}>
 				<div className="content_wrapper">
 					<motion.img alt="feature_image" src="/images/livechat.png" variants={imageVariants}></motion.img>
 					<motion.p variants={singleVariants}>Live chat</motion.p>
-					<motion.button variants={singleVariants}>know more</motion.button>
+					<motion.button variants={singleVariants} onClick={() => dispatch("livechat")}>
+						know more
+					</motion.button>
 				</div>
 			</motion.div>
 			<motion.div className="feature_wrapper item4" ref={ref4} variants={featureVariants} initial="initial" animate={ref4InView ? "animate" : "initial"}>
 				<div className="content_wrapper">
 					<motion.img alt="feature_image" src="/images/animation.jpg" variants={imageVariants}></motion.img>
 					<motion.p variants={singleVariants}>Animation</motion.p>
-					<motion.button variants={singleVariants}>know more</motion.button>
+					<motion.button
+						variants={singleVariants}
+						onClick={() => {
+							dispatch("animation");
+						}}>
+						know more
+					</motion.button>
 				</div>
 			</motion.div>
 			<motion.div className="feature_wrapper item5" ref={ref5} variants={featureVariants} initial="initial" animate={ref5InView ? "animate" : "initial"}>
 				<div className="content_wrapper">
 					<motion.img alt="feature_image" src="/images/database.jpg" variants={imageVariants}></motion.img>
 					<motion.p variants={singleVariants}>Database</motion.p>
-					<motion.button variants={singleVariants}>know more</motion.button>
+					<motion.button variants={singleVariants} onClick={() => dispatch("database")}>
+						know more
+					</motion.button>
 				</div>
 			</motion.div>
 			<motion.div className="feature_wrapper item6" ref={ref6} variants={featureVariants} initial="initial" animate={ref6InView ? "animate" : "initial"}>
 				<div className="content_wrapper">
 					<motion.img alt="feature_image" src="/images/3d.jpg" variants={imageVariants}></motion.img>
 					<motion.p variants={singleVariants}>3d View</motion.p>
-					<motion.button variants={singleVariants}>know more</motion.button>
+					<motion.button variants={singleVariants} onClick={() => dispatch("graphics")}>
+						know more
+					</motion.button>
 				</div>
 			</motion.div>
 		</motion.section>
